@@ -1,0 +1,34 @@
+
+{%extends 'base.html'%}
+{% block content%}
+<br><br>
+
+      
+     <div class="col-lg-4 mx-auto shadow p-0">
+        <div class="alert alert-info">
+            <h2>login Page!</h2>
+        </div>
+        <div class=" p-4">
+            
+          <form method ='POST' action="/login/">
+            {% csrf_token %}
+            {{form.as_p}}
+    
+    
+            <input type="submit" value="Login" class="btn btn-info">
+          </form>
+        </div>
+     </div>
+    
+{%endblock%}
+    
+
+
+
+
+
+
+
+
+
+    

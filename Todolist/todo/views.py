@@ -2,7 +2,17 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .models import *
 from .forms import *
+from django.urls import reverse_lazy
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.views import LoginView
 # Create your views here.
+
+
+    
+
+def 
+
+
 
 def home(request):
     tasks= task.objects.all()

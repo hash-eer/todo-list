@@ -54,11 +54,26 @@
         <div class="col">
           <div class="card" id="list1" style="border-radius: .75rem; background-color: #eff1f2;">
             <div class="card-body py-4 px-4 px-md-5">
-                    
+              
+              {% if request.user.is_authenticated %}
+                <p>{{request.user}}</p>
+                <a href=''>logout</a>
+              {%else%}
+              <a href=''>login</a>
+
+              {%endif%}
+              <hr>
+
               <p class="h1 text-center mt-3 mb-4 pb-3 text-primary">
                 <i class="fas fa-check-square me-1"></i>
                 <u>My Todo list</u>
               </p>
+
+
+
+
+
+
               
               <div class="row d-flex justify-content-center align-items-center h-100">
                 <form method='POST' action="">
